@@ -161,13 +161,13 @@ button{
     }
     .small{
         width: 100%;
-        margin: 0;
     }
     .form-body{
         padding: 24px;
     }
     .form-body > .input-wrapper{
         padding-bottom: 15px;
+        margin: 0;
     }
 
     .logo{
