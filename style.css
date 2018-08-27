@@ -1,0 +1,179 @@
+@font-face {
+    font-family: OpenSansHebrew-Regular;
+    src: url(./fonts/OpenSansHebrew-Regular.ttf);
+ }
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    direction: rtl;
+    background: #fafafa;
+}
+body, input, button, a{
+    font-family: OpenSansHebrew-Regular;
+    color: #434343;
+}
+input, button{
+    font-size: 15px;
+}
+.header{
+    background: url(./img/header-bg.png) #13829f center no-repeat; 
+    height: 208px;
+    padding-top: 43px; 
+    box-sizing: border-box;
+}
+.logo{
+    width: 80px;
+    height: 73px;
+    background: url(./img/logo.png);
+    margin: auto;
+}
+
+.site-container{
+    position: relative;
+}
+.site-form{
+    position: absolute;
+    width: 380px;
+    background: white;
+    top: -50px;
+    right: calc(50% - 190px);
+    box-shadow: 0px 0px 65px rgba(1,1,1,0.15);
+}
+.form-header{
+    text-align: center;
+    padding: 30px;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 22px;
+}
+input:not([type='checkbox']){
+    height: 40px;
+    padding: 6px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    outline: none;
+    box-sizing: border-box;
+}
+input.active{
+    border-color: #fab442;
+}
+.input-wrapper > label{
+    display: block;
+    padding-bottom: 4px;
+}
+label{
+    font-size: 13px;
+}
+.form-body{
+    padding: 30px 40px 35px 40px;
+}
+.form-body > .input-wrapper{
+    padding-bottom: 20px;
+}
+.small{
+    width: calc(50% - 18px);
+    display: inline-block;
+    margin-right: 15px;
+}
+.small:first-child{
+    margin-right: 0;
+    margin-left: 15px;
+}
+button{
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    border: none;
+    border-radius: 2px;
+    background: #fab442;
+    cursor: pointer;
+}
+.terms-of-use{
+    margin: 16px 0 0 0;
+    text-align: center;
+}
+
+
+
+/************** start checkbox *****************/
+
+.terms-of-use > label {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-right: 25px; /* 10 px padding right + 15px input type*/
+}
+
+.terms-of-use > label:before {  
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;  
+    right: 0;
+}
+
+.terms-of-use > input[type=checkbox] {  
+    display: none;  
+}
+
+.terms-of-use.checkbox label:before {
+    background: url(./img/checkbox.png) left center no-repeat;
+    margin-top: 2px;
+}
+
+.terms-of-use > input[type=checkbox]:checked + label:before {  
+    background: url(./img/checkbox-checked.png) left center no-repeat;  
+} 
+
+/************** End checkbox *****************/
+
+::placeholder {
+    color: #ccc;
+    opacity: 1;
+}
+:-ms-input-placeholder {
+   color: #ccc;
+}
+::-ms-input-placeholder {
+   color: #ccc;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .header{
+        height: 130px;
+        padding-top: 20px;
+    }
+    .form-header{
+        padding: 20px;
+    }
+
+    .site-form{
+        width: calc(100% - 40px);
+        margin: 20px;
+        right: 0;
+    }
+    .small{
+        width: 100%;
+        margin: 0;
+    }
+    .form-body{
+        padding: 24px;
+    }
+    .form-body > .input-wrapper{
+        padding-bottom: 15px;
+    }
+
+    .logo{
+        width: 60px;
+        height: 55px;
+        background: url(./img/logo-small.png);
+    }
+
+}
