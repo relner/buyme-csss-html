@@ -11,25 +11,25 @@
     <div class="header">
         <div class="logo"></div>
     </div>
-    <div class="site-container">
+    <form class="site-container">
         <div class="site-form">
             <div class="form-header">הרשמה לאתר</div>
             <div class="form-body">
                 <div class="input-wrapper small">
                     <label for="firstName">שם פרטי</label>
-                    <input type="text" id="firstName">
+                    <input type="text" id="firstName" required>
                 </div>
                 <div class="input-wrapper small">
                     <label for="lastName">שם משפחה</label>
-                    <input type="text" class="active" id="lastName">
+                    <input type="text" class="active" id="lastName" required>
                 </div>
                 <div class="input-wrapper">
                     <label for="email">כתובת אימייל</label>
-                    <input type="text" id="email" placeholder="user@name.com">
+                    <input type="email" id="email" placeholder="user@name.com" required>
                 </div>
                 <div class="input-wrapper">
                     <label for="pass">סיסמה</label>
-                    <input type="text" id="pass">
+                    <input type="password" id="pass" required>
                 </div>
                 <button>הרשמה</button>
                 <div class="terms-of-use checkbox">
@@ -38,6 +38,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </form>
 </body>
 </html>
